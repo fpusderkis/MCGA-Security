@@ -1,0 +1,5 @@
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\bin\ASF.Services.Http.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\bin\ASF.Services.Http.pdb
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Services\ASF.Services.Http\obj\Debug\ASF.Services.Http.csprojResolveAssemblyReference.cache
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Services\ASF.Services.Http\obj\Debug\ASF.Services.Http.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Services\ASF.Services.Http\obj\Debug\ASF.Services.Http.pdb

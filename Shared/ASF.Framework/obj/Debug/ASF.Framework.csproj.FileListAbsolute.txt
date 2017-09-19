@@ -1,0 +1,12 @@
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\ASF.Framework.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\ASF.Framework.pdb
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\AntiXssLibrary.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\HtmlAgilityPack.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\HtmlSanitizationLibrary.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\HtmlAgilityPack.pdb
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\HtmlAgilityPack.xml
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\bin\Debug\HtmlSanitizationLibrary.xml
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\obj\Debug\ASF.Framework.csprojResolveAssemblyReference.cache
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\obj\Debug\ASF.Framework.dll
+C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Shared\ASF.Framework\obj\Debug\ASF.Framework.pdb
