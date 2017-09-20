@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Kuntur.Utilities
+namespace ASF.Framework.Utilities
 {
     public static class ServiceFactory
     {

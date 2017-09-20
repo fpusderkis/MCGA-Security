@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Kuntur.Framework.Kernel.Common.LinqKit
+namespace ASF.Framework.Localization.Kernel.Common.LinqKit
 {
 	/// <summary>
 	/// Custom expresssion visitor for ExpandableQuery. This expands calls to Expression.Compile() and

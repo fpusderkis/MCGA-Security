@@ -1,7 +1,7 @@
 ﻿using System;
-using Kuntur.Framework.Model.Security;
+using ASF.Framework.Localization.Model.General;
 
-namespace Kuntur.Framework.Kernel.Interfaces.Services
+namespace ASF.Framework.Localization.Kernel.Interfaces.Services
 {
     public partial interface ISettingsService
     {

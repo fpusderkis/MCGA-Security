@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Kuntur.Framework.Kernel.Common.LinqKit
+namespace ASF.Framework.Localization.Kernel.Common.LinqKit
 {
 	/// <summary>Refer to http://www.albahari.com/nutshell/linqkit.html and
 	/// http://tomasp.net/blog/linq-expand.aspx for more information.</summary>

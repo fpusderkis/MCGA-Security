@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Kuntur.Framework.Model.General;
-using Kuntur.Framework.Model.General.i18n;
+using ASF.Framework.Localization.Model.General;
+using ASF.Framework.Localization.Model.General.i18n;
 
-namespace Kuntur.Framework.Kernel.Interfaces.Services
+namespace ASF.Framework.Localization.Kernel.Interfaces.Services
 {
     public partial interface ILocalizationService
     {

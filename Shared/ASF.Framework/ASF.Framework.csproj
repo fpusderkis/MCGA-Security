@@ -104,8 +104,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Localization\CacheService.cs" />
-    <Compile Include="Localization\ConfigService.cs" />
+    <Compile Include="Localization\Kernel\Data\Context\Configuration.cs" />
+    <Compile Include="Services\CacheService.cs" />
+    <Compile Include="Services\ConfigService.cs" />
     <Compile Include="Localization\Kernel\Common\Attributes\DescriptionAttribute.cs" />
     <Compile Include="Localization\Kernel\Common\Attributes\DisplayNameAttribute.cs" />
     <Compile Include="Localization\Kernel\Common\Attributes\FilePathAttribute.cs" />
@@ -143,7 +144,8 @@
     <Compile Include="Localization\Kernel\Interfaces\Services\ISettingsService.cs" />
     <Compile Include="Localization\Kernel\Interfaces\Services\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Localization\Kernel\Interfaces\Services\UnitOfWork\IUnitOfWorkManager.cs" />
-    <Compile Include="Localization\LocalizationService.cs" />
+    <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\LocalizationService.cs" />
     <Compile Include="Localization\Model\Enums\CacheTimes.cs" />
     <Compile Include="Localization\Model\Enums\LoginType.cs" />
     <Compile Include="Localization\Model\General\Entity.cs" />
@@ -155,9 +157,9 @@
     <Compile Include="Localization\Model\General\LogEntry.cs" />
     <Compile Include="Localization\Model\General\PagedFullList.cs" />
     <Compile Include="Localization\Model\General\PagedList.cs" />
-    <Compile Include="Localization\Model\Security\Email.cs" />
-    <Compile Include="Localization\Model\Security\Settings.cs" />
-    <Compile Include="Localization\SettingsService.cs" />
+    <Compile Include="Localization\Model\General\Email.cs" />
+    <Compile Include="Localization\Model\General\Settings.cs" />
+    <Compile Include="Services\SettingsService.cs" />
     <Compile Include="Localization\SiteConfig\SiteConfig.cs" />
     <Compile Include="Utilities\BotUtils.cs" />
     <Compile Include="Utilities\CensorUtils.cs" />

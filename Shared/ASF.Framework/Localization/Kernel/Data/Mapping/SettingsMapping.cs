@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Kuntur.Framework.Model.Security;
+using ASF.Framework.Localization.Model.General;
 
-namespace Kuntur.Framework.Kernel.Data.Mapping
+namespace ASF.Framework.Localization.Kernel.Data.Mapping
 {
     public class SettingsMapping : EntityTypeConfiguration<Settings>
     {

@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Data.Entity;
-using Kuntur.Framework.Kernel.Constants;
-using Kuntur.Framework.Kernel.Data.Context;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Model.Enums;
-using Kuntur.Framework.Model.Security;
+using System.Linq;
+using ASF.Framework.Localization.Kernel.Constants;
+using ASF.Framework.Localization.Kernel.Data.Context;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.Enums;
+using ASF.Framework.Localization.Model.General;
 
-namespace Kuntur.Framework.Services
+namespace ASF.Framework.Services
 {
     public partial class SettingsService : ISettingsService
     {

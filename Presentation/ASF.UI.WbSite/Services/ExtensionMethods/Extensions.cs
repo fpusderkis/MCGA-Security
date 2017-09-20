@@ -5,10 +5,10 @@ using System.Linq;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
-using Kuntur.Framework.Model.Security;
-using Kuntur.Framework.Kernel.Constants;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Utilities;
+using ASF.Framework.Localization.Kernel.Constants;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.General;
+using ASF.Framework.Utilities;
 
 
 namespace App.UI.Web.Application.ExtensionMethods

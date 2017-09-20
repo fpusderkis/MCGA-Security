@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Kuntur.Framework.Kernel.Constants
+﻿namespace ASF.Framework.Localization.Kernel.Constants
 {
 
     public static class AppConstants

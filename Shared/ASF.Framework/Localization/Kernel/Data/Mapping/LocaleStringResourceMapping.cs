@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Kuntur.Framework.Model.General.i18n;
+using ASF.Framework.Localization.Model.General.i18n;
 
-namespace Kuntur.Framework.Kernel.Data.Mapping
+namespace ASF.Framework.Localization.Kernel.Data.Mapping
 {
     public class LocaleStringResourceMapping : EntityTypeConfiguration<LocaleStringResource>
     {

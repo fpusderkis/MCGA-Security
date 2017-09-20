@@ -1,4 +1,4 @@
-﻿namespace Kuntur.Framework.Model.Enums
+﻿namespace ASF.Framework.Localization.Model.Enums
 {
     public enum CacheTimes
     {

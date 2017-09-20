@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Kuntur.Framework.Kernel.Common.LinqKit
+namespace ASF.Framework.Localization.Kernel.Common.LinqKit
 {
 	/// <summary>
 	/// See http://www.albahari.com/expressions for information and examples.

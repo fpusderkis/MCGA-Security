@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Kuntur.Framework.Kernel.Common.Attributes
+namespace ASF.Framework.Localization.Kernel.Common.Attributes
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class FilePathAttribute : Attribute

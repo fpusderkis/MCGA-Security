@@ -1,9 +1,10 @@
 ﻿using System.Web.Hosting;
 using System.Xml;
-using Kuntur.Framework.Model.Enums;
-using Kuntur.Framework.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.Enums;
+using ASF.Framework.Services;
 
-namespace Kuntur.Framework.Services.SiteConfig
+namespace ASF.Framework.Localization.SiteConfig
 {
     internal class SiteConfig
     {

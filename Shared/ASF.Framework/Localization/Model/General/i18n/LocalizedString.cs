@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace Kuntur.Framework.Model.General.i18n
+namespace ASF.Framework.Localization.Model.General.i18n
 {
     public class LocalizedString : MarshalByRefObject, IHtmlString
     {

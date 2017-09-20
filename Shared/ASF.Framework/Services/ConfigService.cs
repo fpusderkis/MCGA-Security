@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Text;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Xml;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Model.Enums;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.Enums;
+using ASF.Framework.Localization.SiteConfig;
 
-namespace Kuntur.Framework.Services
+namespace ASF.Framework.Services
 {
     public partial class ConfigService : IConfigService
     {
@@ -28,7 +25,7 @@ namespace Kuntur.Framework.Services
             if (siteConfig == null)
             {
                 siteConfig = new Dictionary<string, string>();
-                var root = SiteConfig.SiteConfig.Instance.GetSiteConfig();
+                var root = SiteConfig.Instance.GetSiteConfig();
                     var nodes = root?.SelectNodes("/kuntur/settings/setting");
                     if (nodes != null)
                     {
@@ -64,7 +61,7 @@ namespace Kuntur.Framework.Services
             if (siteConfig == null)
             {
                 siteConfig = new Dictionary<string, string>();
-                var root = SiteConfig.SiteConfig.Instance.GetSiteConfig();
+                var root = SiteConfig.Instance.GetSiteConfig();
                 var nodes = root?.SelectNodes("/kuntur/types/type");
                 if (nodes != null)
                 {

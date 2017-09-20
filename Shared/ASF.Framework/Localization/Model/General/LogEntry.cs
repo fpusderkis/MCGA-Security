@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Kuntur.Framework.Model.General
+namespace ASF.Framework.Localization.Model.General
 {
     public partial class LogEntry
     {

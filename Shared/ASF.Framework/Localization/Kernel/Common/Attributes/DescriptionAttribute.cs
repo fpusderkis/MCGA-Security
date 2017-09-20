@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Web.Mvc;
-using Kuntur.Framework.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
 
-namespace Kuntur.Framework.Kernel.Common.Attributes
+namespace ASF.Framework.Localization.Kernel.Common.Attributes
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class DescriptionAttribute : Attribute

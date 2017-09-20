@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace Kuntur.Framework.Kernel.Constants
+namespace ASF.Framework.Localization.Kernel.Constants
 {
     public enum UrlType
     {
@@ -10,9 +10,6 @@ namespace Kuntur.Framework.Kernel.Constants
     }
     public static class UrlTypes
     {
-        
-
-
         public static string GenerateFileUrl(string filePath)
         {
             return VirtualPathUtility.ToAbsolute(filePath);

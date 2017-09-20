@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Kuntur.Framework.Kernel.Interfaces.Services
+namespace ASF.Framework.Localization.Kernel.Interfaces.Services
 {
     public partial interface IPagedList<T> : IList<T>
     {

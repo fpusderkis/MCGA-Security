@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Kuntur.Framework.Model.General;
+using ASF.Framework.Localization.Model.General;
 
-namespace Kuntur.Framework.Kernel.Exceptions
+namespace ASF.Framework.Localization.Kernel.Exceptions
 {
 
     public class InUseUnableToDeleteException : Exception

@@ -1,7 +1,7 @@
 ﻿using System;
 using ASF.Framework.Utilities;
 
-namespace Kuntur.Framework.Model.General.i18n
+namespace ASF.Framework.Localization.Model.General.i18n
 {
     public partial class LocaleStringResource : Entity
     {

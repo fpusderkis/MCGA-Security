@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork
+namespace ASF.Framework.Localization.Kernel.Interfaces.Services.UnitOfWork
 {
     public partial interface IUnitOfWorkManager : IDisposable
     {

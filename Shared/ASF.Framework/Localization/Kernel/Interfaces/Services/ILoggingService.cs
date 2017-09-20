@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Kuntur.Framework.Model.General;
+using ASF.Framework.Localization.Model.General;
 
-namespace Kuntur.Framework.Kernel.Interfaces.Services
+namespace ASF.Framework.Localization.Kernel.Interfaces.Services
 {
     public partial interface ILoggingService
     {

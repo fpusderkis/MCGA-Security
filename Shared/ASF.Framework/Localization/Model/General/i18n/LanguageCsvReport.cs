@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Kuntur.Framework.Model.General.i18n
+namespace ASF.Framework.Localization.Model.General.i18n
 {
     public static class CsvExtensionMethods
     {

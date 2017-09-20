@@ -1,9 +1,8 @@
 ﻿using System;
-using Kuntur.Framework.Model.General;
-using Kuntur.Framework.Model.General.i18n;
+using ASF.Framework.Localization.Model.General.i18n;
 using ASF.Framework.Utilities;
 
-namespace Kuntur.Framework.Model.Security
+namespace ASF.Framework.Localization.Model.General
 {
     public partial class Settings : Entity
     {

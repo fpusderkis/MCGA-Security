@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq.Expressions;
 
-namespace Kuntur.Framework.Kernel.Common.LinqKit
+namespace ASF.Framework.Localization.Kernel.Common.LinqKit
 {
 	/// <summary>
 	/// This comes from Matt Warren's sample:

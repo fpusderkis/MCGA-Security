@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
 using System.Web;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Model.Enums;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.Enums;
 
-namespace Kuntur.Framework.Services
+namespace ASF.Framework.Services
 {
     public partial class CacheService : ICacheService
     {

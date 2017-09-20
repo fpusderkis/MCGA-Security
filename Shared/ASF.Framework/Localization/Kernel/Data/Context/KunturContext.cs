@@ -5,13 +5,11 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Reflection;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Model.General;
-using Kuntur.Framework.Model.General.i18n;
-using Kuntur.Framework.Model.Security;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.General;
+using ASF.Framework.Localization.Model.General.i18n;
 
-
-namespace Kuntur.Framework.Kernel.Data.Context
+namespace ASF.Framework.Localization.Kernel.Data.Context
 {
     public partial class KunturContext : DbContext, IKunturContext
     {

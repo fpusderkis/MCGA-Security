@@ -1,44 +1,11 @@
 ﻿using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using ASF.Framework.Utilities;
-using Kuntur.Framework.Kernel.Constants;
-using Kuntur.Framework.Kernel.Data.Context;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork;
-using Kuntur.Framework.Model.General.i18n;
+using ASF.Framework.Localization.Kernel.Constants;
+using ASF.Framework.Localization.Kernel.Data.Context;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Kernel.Interfaces.Services.UnitOfWork;
 
-namespace Kuntur.Framework.Kernel.Data.UnitOfWork
+namespace ASF.Framework.Localization.Kernel.Data.UnitOfWork
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<KunturContext>
-    {
-        public Configuration()
-        {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = false;
-        }
-
-        protected override void Seed(KunturContext context)
-        {
-            const string langCulture = "es-AR";
-            var language = context.Language.FirstOrDefault(x => x.LanguageCulture == langCulture);
-            if (language == null)
-            {
-
-                var cultureInfo = LanguageUtils.GetCulture(langCulture);
-                language = new Language
-                {
-                    Name = cultureInfo.EnglishName,
-                    LanguageCulture = cultureInfo.Name,
-                };
-                context.Language.Add(language);
-                context.SaveChanges();
-            }
-
-
-        }
-    }
-
     public class UnitOfWorkManager : IUnitOfWorkManager
     {
         private bool _isDisposed;

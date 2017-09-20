@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork
+namespace ASF.Framework.Localization.Kernel.Interfaces.Services.UnitOfWork
 {
     public partial interface IUnitOfWork : IDisposable
     {

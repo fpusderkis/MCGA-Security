@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Kuntur.Framework.Kernel.Common.LinqKit
+namespace ASF.Framework.Localization.Kernel.Common.LinqKit
 {
 	/// <summary>
 	/// Another good idea by Tomas Petricek.

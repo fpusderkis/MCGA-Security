@@ -6,15 +6,15 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Web;
-using Kuntur.Framework.Kernel.Constants;
-using Kuntur.Framework.Kernel.Data.Context;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Model.Enums;
-using Kuntur.Framework.Model.General;
-using Kuntur.Framework.Model.General.i18n;
+using ASF.Framework.Localization.Kernel.Constants;
+using ASF.Framework.Localization.Kernel.Data.Context;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Model.Enums;
+using ASF.Framework.Localization.Model.General;
+using ASF.Framework.Localization.Model.General.i18n;
 using ASF.Framework.Utilities;
 
-namespace Kuntur.Framework.Services
+namespace ASF.Framework.Services
 {
     public partial class LocalizationService : ILocalizationService
     {

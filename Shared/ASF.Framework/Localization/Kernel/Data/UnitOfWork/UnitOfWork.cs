@@ -2,11 +2,11 @@
 using System.Data;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
-using Kuntur.Framework.Kernel.Data.Context;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork;
+using ASF.Framework.Localization.Kernel.Data.Context;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Kernel.Interfaces.Services.UnitOfWork;
 
-namespace Kuntur.Framework.Kernel.Data.UnitOfWork
+namespace ASF.Framework.Localization.Kernel.Data.UnitOfWork
 {
     public partial class UnitOfWork : IUnitOfWork
     {

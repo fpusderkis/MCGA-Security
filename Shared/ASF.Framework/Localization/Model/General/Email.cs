@@ -1,8 +1,7 @@
 ﻿using System;
 using ASF.Framework.Utilities;
-using Kuntur.Framework.Model.General;
 
-namespace Kuntur.Framework.Model.Security
+namespace ASF.Framework.Localization.Model.General
 {
     public partial class Email : Entity
     {

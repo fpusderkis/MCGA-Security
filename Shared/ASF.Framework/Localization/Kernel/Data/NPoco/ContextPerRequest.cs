@@ -1,8 +1,8 @@
 ﻿using System.Web;
-using Kuntur.Framework.Kernel.Constants;
+using ASF.Framework.Localization.Kernel.Constants;
 using NPoco;
 
-namespace Kuntur.Framework.Kernel.Data.NPoco
+namespace ASF.Framework.Localization.Kernel.Data.NPoco
 {
     internal static class ContextPerRequest
     {

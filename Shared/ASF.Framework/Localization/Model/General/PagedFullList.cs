@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Kuntur.Framework.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
 
-namespace Kuntur.Framework.Model.General
+namespace ASF.Framework.Localization.Model.General
 {
     public partial class PagedFullList<T> : List<T>, IPagedList<T>
     {

@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Reflection;
 using System.Web.Mvc;
+using ASF.Framework.Localization.Kernel.Data.Context;
+using ASF.Framework.Localization.Kernel.Data.UnitOfWork;
+using ASF.Framework.Localization.Kernel.Interfaces.Services;
+using ASF.Framework.Localization.Kernel.Interfaces.Services.UnitOfWork;
+using ASF.Framework.Services;
 using ASF.UI.WbSite.Models;
 using ASF.UI.WbSite.Services.BrowserConfig;
 using ASF.UI.WbSite.Services.Feed;
@@ -17,12 +22,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
-using ASF.UI.WbSite.Services.Cache;
-using Kuntur.Framework.Kernel.Data.Context;
-using Kuntur.Framework.Kernel.Data.UnitOfWork;
-using Kuntur.Framework.Kernel.Interfaces.Services;
-using Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork;
-using Kuntur.Framework.Services;
+using CacheService = ASF.Framework.Services.CacheService;
+using ICacheService = ASF.Framework.Localization.Kernel.Interfaces.Services.ICacheService;
 
 namespace ASF.UI.WbSite
 {
@@ -110,7 +111,7 @@ namespace ASF.UI.WbSite
             builder.RegisterType<LocalizationService>().As< ILocalizationService > ().InstancePerDependency();
             builder.RegisterType<SettingsService>().As<ISettingsService>().InstancePerDependency();
             builder.RegisterType<ConfigService>().As<IConfigService>().InstancePerDependency();
-            builder.RegisterType<Kuntur.Framework.Services.CacheService>().As<Kuntur.Framework.Kernel.Interfaces.Services.ICacheService>().InstancePerDependency();
+            builder.RegisterType<CacheService>().As<ICacheService>().InstancePerDependency();
 
         }
 
