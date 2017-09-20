@@ -71,12 +71,7 @@ namespace ASF.Entities
         [DisplayName("Signup Date")]
         public DateTime SignupDate { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        [DisplayName("Rowid")]
-        public Guid Rowid { get; set; }
+        
 
         /// <summary>
         /// 

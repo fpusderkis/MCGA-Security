@@ -4,11 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ASF.UI.Process;
+using Kuntur.Framework.Kernel.Interfaces.Services;
+using Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork;
 
 namespace ASF.UI.WbSite.Areas.Categories.Controllers
 {
     public class CategoryController : Controller
     {
+        
+        public CategoryController(IUnitOfWorkManager unitOfWorkManager,
+            ILocalizationService localizationService,
+            ISettingsService settingsService)
+            
+        {
+            
+        }
         // GET: Categories/Category
         public ActionResult Index()
         {

@@ -277,6 +277,8 @@
     <Compile Include="Services\BrowserConfig\IBrowserConfigService.cs" />
     <Compile Include="Services\Cache\CacheService.cs" />
     <Compile Include="Services\Cache\ICacheService.cs" />
+    <Compile Include="Services\ExtensionMethods\Extensions.cs" />
+    <Compile Include="Services\ExtensionMethods\HtmlLabelExtensions.cs" />
     <Compile Include="Services\Logging\ILoggingService.cs" />
     <Compile Include="Services\Logging\LoggingService.cs" />
     <Compile Include="Services\Manifest\IManifestService.cs" />
@@ -419,6 +421,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="App_Data\asf.config" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -572,7 +575,6 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Categories\Models\" />
     <Folder Include="Areas\Categories\Views\Shared\" />
   </ItemGroup>
@@ -585,6 +587,10 @@
     <ProjectReference Include="..\..\Shared\ASF.Entities\ASF.Entities.csproj">
       <Project>{5f7c08e8-891e-41c7-9e8d-e94b75222c0b}</Project>
       <Name>ASF.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\ASF.Framework\ASF.Framework.csproj">
+      <Project>{B07FAACC-7F82-4FDB-9BBB-666711EEF0F4}</Project>
+      <Name>ASF.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\ASF.UI.Process\ASF.UI.Process.csproj">
       <Project>{16102133-b8dc-4516-b714-c2802ecfa923}</Project>

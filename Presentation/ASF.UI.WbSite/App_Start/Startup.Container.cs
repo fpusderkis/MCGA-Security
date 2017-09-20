@@ -18,6 +18,11 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 using ASF.UI.WbSite.Services.Cache;
+using Kuntur.Framework.Kernel.Data.Context;
+using Kuntur.Framework.Kernel.Data.UnitOfWork;
+using Kuntur.Framework.Kernel.Interfaces.Services;
+using Kuntur.Framework.Kernel.Interfaces.Services.UnitOfWork;
+using Kuntur.Framework.Services;
 
 namespace ASF.UI.WbSite
 {
@@ -87,9 +92,9 @@ namespace ASF.UI.WbSite
         private static void RegisterServices(ContainerBuilder builder)
         {
             builder.RegisterType<BrowserConfigService>().As<IBrowserConfigService>().InstancePerRequest();
-            builder.RegisterType<CacheService>().As<ICacheService>().SingleInstance();
+            builder.RegisterType<Services.Cache.CacheService>().As<Services.Cache.ICacheService>().SingleInstance();
             builder.RegisterType<FeedService>().As<IFeedService>().InstancePerRequest();
-            builder.RegisterType<LoggingService>().As<ILoggingService>().SingleInstance();
+            builder.RegisterType<LoggingService>().As<Services.Logging.ILoggingService>().SingleInstance();
             builder.RegisterType<ManifestService>().As<IManifestService>().InstancePerRequest();
             builder.RegisterType<OpenSearchService>().As<IOpenSearchService>().InstancePerRequest();
             builder.RegisterType<RobotsService>().As<IRobotsService>().InstancePerRequest();
@@ -97,6 +102,15 @@ namespace ASF.UI.WbSite
             builder.RegisterType<SitemapPingerService>().As<ISitemapPingerService>().InstancePerRequest();
             builder.RegisterType<EmailService>().As<IIdentityMessageService>().InstancePerRequest();
 
+            // ###Bind the various domain model services and repositories that e.g. our controllers require     
+
+
+            builder.RegisterType<KunturContext>().As<IKunturContext>().InstancePerRequest();
+            builder.RegisterType<UnitOfWorkManager>().As<IUnitOfWorkManager>().InstancePerDependency();
+            builder.RegisterType<LocalizationService>().As< ILocalizationService > ().InstancePerDependency();
+            builder.RegisterType<SettingsService>().As<ISettingsService>().InstancePerDependency();
+            builder.RegisterType<ConfigService>().As<IConfigService>().InstancePerDependency();
+            builder.RegisterType<Kuntur.Framework.Services.CacheService>().As<Kuntur.Framework.Kernel.Interfaces.Services.ICacheService>().InstancePerDependency();
 
         }
 

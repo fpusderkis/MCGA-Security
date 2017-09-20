@@ -3,3 +3,8 @@ C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\bin\ASF.Business.pdb
 C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Business\ASF.Business\obj\Debug\ASF.Business.csprojResolveAssemblyReference.cache
 C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Business\ASF.Business\obj\Debug\ASF.Business.dll
 C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Business\ASF.Business\obj\Debug\ASF.Business.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\bin\ASF.Business.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\bin\ASF.Business.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Business\ASF.Business\obj\Debug\ASF.Business.csprojResolveAssemblyReference.cache
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Business\ASF.Business\obj\Debug\ASF.Business.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Business\ASF.Business\obj\Debug\ASF.Business.pdb

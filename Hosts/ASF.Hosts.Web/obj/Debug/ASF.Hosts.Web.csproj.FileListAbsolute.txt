@@ -27,3 +27,36 @@ C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Hosts\ASF.Hosts.Web\b
 C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Hosts\ASF.Hosts.Web\obj\Debug\ASF.Hosts.Web.csprojResolveAssemblyReference.cache
 C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Hosts\ASF.Hosts.Web\obj\Debug\ASF.Hosts.Web.dll
 C:\Temp\03 MCGA-20170402T213342Z-001\SolutionsLeatherGoods\Hosts\ASF.Hosts.Web\obj\Debug\ASF.Hosts.Web.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Hosts.Web.dll.config
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Hosts.Web.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Hosts.Web.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Business.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Data.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Entities.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Services.Contracts.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Services.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Services.Http.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Newtonsoft.Json.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Swashbuckle.Core.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\System.Net.Http.Formatting.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\System.Web.Http.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\System.Web.Http.WebHost.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\WebActivatorEx.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Business.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Data.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Services.Contracts.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Services.Http.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Services.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\ASF.Entities.pdb
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Newtonsoft.Json.xml
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\System.Net.Http.Formatting.xml
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\System.Web.Http.xml
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\System.Web.Http.WebHost.xml
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\obj\Debug\ASF.Hosts.Web.csprojResolveAssemblyReference.cache
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\obj\Debug\ASF.Hosts.Web.dll
+C:\Developers\Proyectos\Universidad\LeatherGoods-Security\Hosts\ASF.Hosts.Web\obj\Debug\ASF.Hosts.Web.pdb
