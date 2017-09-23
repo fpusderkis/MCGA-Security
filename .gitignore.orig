@@ -249,20 +249,9 @@ _Pvt_Extensions
 *.sln.iml
 
 !Nuget.exe
-src/Logs/
-src/Telefe.RutinaOperativa.Site/node_modules/*.*
-src/Telefe.RutinaOperativa.Site/libs/
-src/Telefe.RutinaOperativa.Site/Scripts/app/
-src/Telefe.RutinaOperativa.Site/app/src/*.js
-src/Telefe.RutinaOperativa.Site/app/src/*.*.js
-src/Telefe.RutinaOperativa.Site/app/src/**/*.js
-src/Telefe.RutinaOperativa.Site/app/src/**/*.js.map
-src/Telefe.RutinaOperativa.Site/app/src/*.js.map
-src/Logs/*.*
 deploy
 <<<<<<< HEAD
-/src/Telefe.RutinaOperativa.Site/app/dist/
+
 =======
-src/Telefe.RutinaOperativa.Site/dist
-/src/Telefe.RutinaOperativa.Site/app/dist
+
 >>>>>>> 2ac84236772b79601cc426cf696b435485042671
