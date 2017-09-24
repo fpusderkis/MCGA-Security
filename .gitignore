@@ -260,9 +260,4 @@ src/Telefe.RutinaOperativa.Site/app/src/**/*.js.map
 src/Telefe.RutinaOperativa.Site/app/src/*.js.map
 src/Logs/*.*
 deploy
-<<<<<<< HEAD
-/src/Telefe.RutinaOperativa.Site/app/dist/
-=======
-src/Telefe.RutinaOperativa.Site/dist
 /src/Telefe.RutinaOperativa.Site/app/dist
->>>>>>> 2ac84236772b79601cc426cf696b435485042671
