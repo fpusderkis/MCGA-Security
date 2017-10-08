@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ASF.Framework.Localization.Kernel.Interfaces.Services
+namespace ASF.Framework.Data.Common.Context
 {
     public interface IKunturContext : IDisposable
     {

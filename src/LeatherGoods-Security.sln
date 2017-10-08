@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.UI.WbSite", "Presentati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.Framework", "Shared\ASF.Framework\ASF.Framework.csproj", "{B07FAACC-7F82-4FDB-9BBB-666711EEF0F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.Framework.Data", "Shared\ASF.Framework.Data\ASF.Framework.Data.csproj", "{04C91AFC-5B87-4DCB-B3D0-E79A563D52AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{B07FAACC-7F82-4FDB-9BBB-666711EEF0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B07FAACC-7F82-4FDB-9BBB-666711EEF0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B07FAACC-7F82-4FDB-9BBB-666711EEF0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C91AFC-5B87-4DCB-B3D0-E79A563D52AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C91AFC-5B87-4DCB-B3D0-E79A563D52AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C91AFC-5B87-4DCB-B3D0-E79A563D52AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C91AFC-5B87-4DCB-B3D0-E79A563D52AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,5 +111,9 @@ Global
 		{6DCC2017-3E5B-4A79-8703-DB4E4E03A01E} = {C038D7B5-912E-4F17-A72D-1FF2ABEAF92B}
 		{2AE8D9D4-1145-464B-8283-4AAECC485E62} = {23A6FD26-81A6-4B11-A42F-25E457DE4192}
 		{B07FAACC-7F82-4FDB-9BBB-666711EEF0F4} = {6200C4EA-A4E9-440C-82AA-62CD5F441BDB}
+		{04C91AFC-5B87-4DCB-B3D0-E79A563D52AF} = {6200C4EA-A4E9-440C-82AA-62CD5F441BDB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
