@@ -50,12 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Contexts\IDbContext.cs" />
-    <Compile Include="Common\IKunturContext.cs" />
+    <Compile Include="Common\Contexts\IKunturContext.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Common\Contexts\KunturContext.cs" />
     <Compile Include="Common\Repository\BaseRepository.cs" />
     <Compile Include="Common\Repository\IRepository.cs" />
     <Compile Include="Ef\Repository\IEfRepository.cs" />
     <Compile Include="Ef\Repository\Implementation\BaseEfRepository.cs" />
     <Compile Include="Ef\Repository\Implementation\EfRepository.cs" />
+    <Compile Include="Infrastructure\Implementation\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,17 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using ASF.Framework.Localization.Model.General;
+using System.Data.Entity.Infrastructure;
+using System;
 
 namespace ASF.Framework.Data.Common.Context
 {
-    public interface IDbContext
+    public interface IDbContext : IDisposable
     {
         /// <summary>
         /// Get DbSet
         /// </summary>
         /// <typeparam name="TEntity">Entity type</typeparam>
         /// <returns>DbSet</returns>
-        IDbSet<TEntity> Set<TEntity>() where TEntity : Entity;
+        IDbSet<TEntity> Set<TEntity>() where TEntity : class;
 
         /// <summary>
         /// Save changes
@@ -63,5 +65,30 @@ namespace ASF.Framework.Data.Common.Context
         /// Gets or sets a value indicating whether auto detect changes setting is enabled (used in EF)
         /// </summary>
         bool AutoDetectChangesEnabled { get; set; }
+
+        /// <summary>
+        /// Set State of entity
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entry"></param>
+        /// <param name="state"></param>
+        void SetEntityState<TEntity>(TEntity entry, EntityState state) where TEntity : class;
+
+        /// <summary>
+        /// Reload Entity
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entry"></param>
+        void Reload<T>(T entry) where T : class;
+
+        /// <summary>
+        /// Entry Entity
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
+
+        DbChangeTracker ChangeTracker { get; }
     }
 }

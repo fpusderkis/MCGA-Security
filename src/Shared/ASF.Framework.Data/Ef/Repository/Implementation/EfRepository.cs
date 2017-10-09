@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ASF.Framework.Data.Common.Context;
 using ASF.Framework.Data.Common.Repository;
-using ASF.Framework.Localization.Model.General;
+using ASF.Framework.Localization.Kernel.Common;
 
 namespace ASF.Framework.Data.Ef.Repository
 {
@@ -15,7 +15,8 @@ namespace ASF.Framework.Data.Ef.Repository
     /// Entity Framework Repository
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class EfRepository<T> : BaseEfRepository, IEfRepository<T>, IRepository<T>, BaseRepository<T> where T : Entity
+    public class EfRepository<TEntity> : BaseEfRepository, IEfRepository<TEntity>, IRepository<TEntity>, BaseRepository<TEntity>
+        where TEntity : EntityBase
     {
         #region Ctor
 
@@ -28,173 +29,173 @@ namespace ASF.Framework.Data.Ef.Repository
 
         #region Fields
 
-        private IDbSet<T> _entities;
+        private IDbSet<TEntity> _entities;
 
         /// <summary>
         /// Entities
         /// </summary>
-        protected virtual IDbSet<T> Entities => _entities ?? (_entities = Context.Set<T>());
+        protected virtual IDbSet<TEntity> Entities => _entities ?? (_entities = Context.Set<TEntity>());
+
+        public IQueryable<TEntity> Table => Entities;
+
+        public IQueryable<TEntity> TableNoTracking => this.Entities.AsNoTracking();
 
         #endregion
 
-
-        public T GetById(object id)
-        {
-            return this.Entities.Find(id);
-        }
-
-        public void Insert(T entity)
-        {
-            try
-            {
-                if (entity == null)
-                    throw new ArgumentNullException("entity");
-
-                this.Entities.Add(entity);
-
-                this.Context.SaveChanges();
-            }
-            catch (DbEntityValidationException dbEx)
-            {
-                throw new Exception(GetFullErrorText(dbEx), dbEx);
-            }
-        }
-
-        public void Insert(IEnumerable<T> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(IEnumerable<T> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(IEnumerable<T> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<T> Table { get; }
-        public IQueryable<T> TableNoTracking { get; }
-        public IEnumerable<TEntity> GetAll<TEntity>(Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = null, int? take = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<TEntity>> GetAllAsync<TEntity>(Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = null, int? take = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<TEntity> Get<TEntity>(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null,
-            int? skip = null, int? take = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<TEntity>> GetAsync<TEntity>(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = null,
-            int? take = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntity GetOne<TEntity>(Expression<Func<TEntity, bool>> filter = null, string includeProperties = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<TEntity> GetOneAsync<TEntity>(Expression<Func<TEntity, bool>> filter = null, string includeProperties = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntity GetFirst<TEntity>(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<TEntity> GetFirstAsync<TEntity>(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public TEntity GetById<TEntity>(object id) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<TEntity> GetByIdAsync<TEntity>(object id) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetCount<TEntity>(Expression<Func<TEntity, bool>> filter = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<int> GetCountAsync<TEntity>(Expression<Func<TEntity, bool>> filter = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool GetExists<TEntity>(Expression<Func<TEntity, bool>> filter = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> GetExistsAsync<TEntity>(Expression<Func<TEntity, bool>> filter = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Create<TEntity>(TEntity entity, string createdBy = null) where TEntity : Entity
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update<TEntity>(TEntity entity, string modifiedBy = null) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete<TEntity>(object id) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete<TEntity>(TEntity entity) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Save()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<int> SaveAsync()
-        {
-            throw new NotImplementedException();
-        }
 
         #region Utilities
 
         private string GetFullErrorText(DbEntityValidationException dbEx)
         {
-            throw new NotImplementedException();
+            return dbEx.EntityValidationErrors
+               .SelectMany(validationErrors => validationErrors.ValidationErrors)
+               .Aggregate(string.Empty, (current, error) => current + (string.Format("Property: {0} Error: {1}", error.PropertyName, error.ErrorMessage) + Environment.NewLine));
         }
+
+        #endregion
+
+        #region Public Methods
+
+
+        public virtual TEntity GetById(object id)
+        {
+            return this.Entities.Find(id);
+        }
+        
+        public virtual IEnumerable<TEntity> GetAll(Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = default(int?), int? take = default(int?))
+        {
+            return this.GetQueryable(null, orderBy, includeProperties, skip, take).ToList();
+        }
+
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync(Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = default(int?), int? take = default(int?))
+        {
+            return await this.GetQueryable(null, orderBy, includeProperties, skip, take).ToListAsync();
+        }
+
+        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = default(int?), int? take = default(int?))
+        {
+            return this.GetQueryable(filter, orderBy, includeProperties, skip, take).ToList();
+        }
+
+        public virtual async Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null, int? skip = default(int?), int? take = default(int?))
+        {
+            return await this.GetQueryable(filter, orderBy, includeProperties, skip, take).ToListAsync();
+        }
+
+        public virtual TEntity GetOne(Expression<Func<TEntity, bool>> filter = null, string includeProperties = null)
+        {
+            return GetQueryable(filter, null, includeProperties).FirstOrDefault();
+        }
+
+        public virtual async Task<TEntity> GetOneAsync(Expression<Func<TEntity, bool>> filter = null, string includeProperties = null)
+        {
+            return await GetQueryable(filter, null, includeProperties).FirstOrDefaultAsync();
+        }
+
+        public virtual TEntity GetFirst(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null)
+        {
+            return this.GetQueryable(filter, orderBy, includeProperties).FirstOrDefault();
+        }
+
+        public virtual async Task<TEntity> GetFirstAsync(Expression<Func<TEntity, bool>> filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, string includeProperties = null)
+        {
+            return await this.GetQueryable(filter, orderBy, includeProperties).FirstOrDefaultAsync();
+        }
+
+        public virtual async Task<TEntity> GetByIdAsync(object id)
+        {
+            return await this.Table.FirstAsync(x => x.Id == (long)id);
+        }
+
+        public virtual int GetCount(Expression<Func<TEntity, bool>> filter = null)
+        {
+            return this.GetQueryable(filter).Count();
+        }
+
+        public virtual async Task<int> GetCountAsync(Expression<Func<TEntity, bool>> filter = null)
+        {
+            return await GetQueryable(filter).CountAsync();
+        }
+
+        public virtual bool GetExists(Expression<Func<TEntity, bool>> filter = null)
+        {
+            return GetQueryable(filter).Any();
+        }
+
+        public virtual async Task<bool> GetExistsAsync(Expression<Func<TEntity, bool>> filter = null)
+        {
+            return await GetQueryable(filter).AnyAsync();
+        }
+
+        public virtual void Create(TEntity entity)
+        {
+            this.Entities.Add(entity);
+        }
+
+        public virtual void Update(TEntity entity)
+        {
+            this.Entities.Attach(entity);
+            this.Context.SetEntityState(entity, EntityState.Modified);
+        }
+
+        public virtual void Delete(object id)
+        {
+            var entity = this.Entities.Find(id);
+            this.Entities.Remove(entity);
+        }
+
+        public virtual void Delete(TEntity entity)
+        {
+            if (Context.Entry(entity).State == EntityState.Detached)
+            {
+                Entities.Attach(entity);
+            }
+            Entities.Remove(entity);
+        }
+
+        #endregion
+
+        #region Utilities
+
+        protected virtual IQueryable<TEntity> GetQueryable(
+            Expression<Func<TEntity, bool>> filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            string includeProperties = null,
+            int? skip = null,
+            int? take = null)
+        {
+            includeProperties = includeProperties ?? string.Empty;
+            IQueryable<TEntity> query = Table;
+
+            if (filter != null)
+            {
+                query = Table.Where(filter);
+            }
+
+            foreach (var includeProperty in includeProperties.Split
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+            }
+
+            if (skip.HasValue)
+            {
+                query = query.Skip(skip.Value);
+            }
+
+            if (take.HasValue)
+            {
+                query = query.Take(take.Value);
+            }
+
+            return query;
+        }
+
 
         #endregion
     }

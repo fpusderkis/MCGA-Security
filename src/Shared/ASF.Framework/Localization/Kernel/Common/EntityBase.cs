@@ -5,7 +5,7 @@ namespace ASF.Framework.Localization.Kernel.Common
     /// <summary>
     /// Base class for entities
     /// </summary>
-    public abstract partial class Entity : IEquatable<Entity>
+    public abstract partial class EntityBase : IEquatable<EntityBase>
     {
         /// <summary>
         /// Gets or sets the entity identifier
@@ -14,10 +14,10 @@ namespace ASF.Framework.Localization.Kernel.Common
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as Entity);
+            return Equals(obj as EntityBase);
         }
 
-        private static bool IsTransient(Entity obj)
+        private static bool IsTransient(EntityBase obj)
         {
             return obj != null && Equals(obj.Id, default(int));
         }
@@ -27,7 +27,7 @@ namespace ASF.Framework.Localization.Kernel.Common
             return GetType();
         }
 
-        public virtual bool Equals(Entity other)
+        public virtual bool Equals(EntityBase other)
         {
             if (other == null)
                 return false;
@@ -55,12 +55,12 @@ namespace ASF.Framework.Localization.Kernel.Common
             return Id.GetHashCode();
         }
 
-        public static bool operator ==(Entity x, Entity y)
+        public static bool operator ==(EntityBase x, EntityBase y)
         {
             return Equals(x, y);
         }
 
-        public static bool operator !=(Entity x, Entity y)
+        public static bool operator !=(EntityBase x, EntityBase y)
         {
             return !(x == y);
         }

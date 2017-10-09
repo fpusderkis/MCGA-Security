@@ -109,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Localization\Kernel\Data\Context\Configuration.cs" />
+    <Compile Include="Localization\Kernel\Common\EntityBase.cs" />
+    <Compile Include="Localization\Model\General\Entity.cs" />
     <Compile Include="Services\CacheService.cs" />
     <Compile Include="Services\ConfigService.cs" />
     <Compile Include="Localization\Kernel\Common\Attributes\DescriptionAttribute.cs" />
@@ -152,7 +154,6 @@
     <Compile Include="Services\LocalizationService.cs" />
     <Compile Include="Localization\Model\Enums\CacheTimes.cs" />
     <Compile Include="Localization\Model\Enums\LoginType.cs" />
-    <Compile Include="Localization\Model\General\Entity.cs" />
     <Compile Include="Localization\Model\General\i18n\Language.cs" />
     <Compile Include="Localization\Model\General\i18n\LanguageCsvReport.cs" />
     <Compile Include="Localization\Model\General\i18n\LocaleResourceKey.cs" />

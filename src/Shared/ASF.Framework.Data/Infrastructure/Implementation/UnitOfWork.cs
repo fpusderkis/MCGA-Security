@@ -2,26 +2,25 @@
 using System.Data;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
-using ASF.Framework.Localization.Kernel.Data.Context;
 using ASF.Framework.Localization.Kernel.Interfaces.Services;
-using ASF.Framework.Localization.Kernel.Interfaces.Services.UnitOfWork;
+using ASF.Framework.Data.Common.Context;
 
-namespace ASF.Framework.Localization.Kernel.Data.UnitOfWork
+namespace ASF.Framework.Data.Common.Context
 {
     public partial class UnitOfWork : IUnitOfWork
     {
         //http://msdn.microsoft.com/en-us/library/bb738523.aspx
         //http://stackoverflow.com/questions/815586/entity-framework-using-transactions-or-savechangesfalse-and-acceptallchanges
 
-        private readonly KunturContext _context;
+        private readonly IDbContext _context;
         private readonly IDbTransaction _transaction;
-        private readonly ObjectContext _objectContext;        
+        private readonly ObjectContext _objectContext;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public UnitOfWork(KunturContext context)
-        {            
+        public UnitOfWork(IDbContext context)
+        {
             _context = context;
 
             // In order to make calls that are overidden in the caching ef-wrapper, we need to use
@@ -30,7 +29,7 @@ namespace ASF.Framework.Localization.Kernel.Data.UnitOfWork
             // by the wrapper so the cache can be adjusted.
             // This won't work with the dbcontext because it handles the connection itself, so we must use the underlying ObjectContext. 
             // http://blogs.msdn.com/b/diego/archive/2012/01/26/exception-from-dbcontext-api-entityconnection-can-only-be-constructed-with-a-closed-dbconnection.aspx
-            _objectContext = ((IObjectContextAdapter) _context).ObjectContext;
+            _objectContext = ((IObjectContextAdapter)_context).ObjectContext;
 
             // Updating EF timeout taken from
             // http://stackoverflow.com/questions/6232633/entity-framework-timeouts
@@ -43,25 +42,15 @@ namespace ASF.Framework.Localization.Kernel.Data.UnitOfWork
             }
         }
 
-        public void AutoDetectChangesEnabled(bool option)
-        {
-            _context.Configuration.AutoDetectChangesEnabled = option;
-        }
-
-        public void LazyLoadingEnabled(bool option)
-        {
-            _context.Configuration.LazyLoadingEnabled = option;
-        }
-
         public void SaveChanges()
         {
             _context.SaveChanges();
         }
-        
+
         public void Commit()
         {
             _context.SaveChanges();
-            _transaction.Commit();            
+            _transaction.Commit();
         }
 
         /// <summary>
@@ -78,9 +67,9 @@ namespace ASF.Framework.Localization.Kernel.Data.UnitOfWork
         public void Rollback()
         {
             _transaction.Rollback();
-  
+
             // http://blog.oneunicorn.com/2011/04/03/rejecting-changes-to-entities-in-ef-4-1/
-            
+
             foreach (var entry in _context.ChangeTracker.Entries())
             {
                 switch (entry.State)

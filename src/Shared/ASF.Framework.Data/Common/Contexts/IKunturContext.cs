@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace ASF.Framework.Data.Common.Context
+﻿namespace ASF.Framework.Data.Common.Context
 {
-    public interface IKunturContext : IDisposable
+    public interface IKunturContext : IDbContext
     {
     }
 }
